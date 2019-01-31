@@ -10,4 +10,12 @@ public class NullSafety {
     public String getMaybeNull() {
         return maybeNull;
     }
+
+    public String uglyNullChecking() {
+        if(maybeNull == null) {
+            return "Well, it's null";
+        }
+
+        return maybeNull;
+    }
 }
