@@ -15,10 +15,11 @@ class NullSafetyTest: ShouldSpec() {
         }
 
         should("Won't even compile with null") {
-//            val cantBeNull = com.kotlin.`is`.awesome.NullSafety(null, null)
+            //val cantBeNull = com.kotlin.`is`.awesome.NullSafety(null, null)
             val nullSafety = com.kotlin.`is`.awesome.NullSafety("Not null", null)
 
             nullSafety.cantBeNull shouldBe "Not null"
+            //nullSafety.mightBeNull.contains("Hi")
         }
 
         should("Use the elvis operator") {
@@ -34,7 +35,7 @@ class NullSafetyTest: ShouldSpec() {
 
             nullSafety.mightBeNull shouldBe null
             shouldThrow<NullPointerException> {
-                nullSafety.mightBeNull!!.contains("This will fail")
+                nullSafety.notNullAssertionOperator()
             }
         }
     }
