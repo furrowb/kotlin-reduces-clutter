@@ -28,7 +28,7 @@ class ParameterPassingTest: ShouldSpec() {
                 this.thirdSetting("Third")
             }
 
-            javaParameters.also {
+            javaParameters.let {
                 it.firstSetting shouldBe "First"
                 it.secondSetting shouldBe "Second"
                 it.thirdSetting shouldBe "Third"
@@ -42,10 +42,21 @@ class ParameterPassingTest: ShouldSpec() {
                 it.thirdSetting = "Third"
             }
 
-            kotlinParameters.also {
+            kotlinParameters.let {
                 it.firstSetting shouldBe "First"
                 it.secondSetting shouldBe "Second"
                 it.thirdSetting shouldBe "Third"
+            }
+        }
+
+        should("Use Kotlin's named parameters") {
+            val kotlinParameters = KotlinParameters()
+            kotlinParameters.setParams(firstSetting = "First", secondSetting = "Second")
+
+            kotlinParameters.let {
+                it.firstSetting shouldBe "First"
+                it.secondSetting shouldBe "Second"
+                it.thirdSetting shouldBe "Default"
             }
         }
     }
