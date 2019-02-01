@@ -2,6 +2,7 @@ package com.java.is.okay;
 
 public class LessSmartCasting {
     public static String convertToString(Object object) {
+        // Have to explicitly check for null
         if(object == null) {
             return "Well, it's null";
         }
