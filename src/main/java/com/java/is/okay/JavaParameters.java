@@ -3,8 +3,9 @@ package com.java.is.okay;
 public class JavaParameters {
     private String firstSetting;
     private String secondSetting;
-    private String thirdSetting = "Default";
+    private String thirdSetting = "Default"; // Set a default value but unwieldy to use
 
+    // No way to have a default parameter unless we overload method
     public void setParameters(String firstSetting, String secondSetting, String thirdSetting) {
         this.firstSetting = firstSetting;
         this.secondSetting = secondSetting;

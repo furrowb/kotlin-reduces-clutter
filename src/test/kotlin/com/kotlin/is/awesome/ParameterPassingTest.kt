@@ -20,7 +20,6 @@ class ParameterPassingTest: ShouldSpec() {
         }
 
         should("Use Java's parameter passing sluggishly but with Kotlin scope functions") {
-            // Apply is one of Kotlin's Scope functions that work on any object
             val javaParameters = JavaParameters().apply {
                 this.setParameters("First one!", "Second One!", "Still have to set the third one")
                 this.firstSetting("First")
