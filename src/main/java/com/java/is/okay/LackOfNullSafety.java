@@ -1,9 +1,9 @@
 package com.java.is.okay;
 
-public class NullSafety {
+public class LackOfNullSafety {
     private String maybeNull;
 
-    public NullSafety(String mightBeNull) {
+    public LackOfNullSafety(String mightBeNull) {
         this.maybeNull = mightBeNull;
     }
 

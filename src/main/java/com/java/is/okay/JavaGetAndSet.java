@@ -3,12 +3,12 @@ package com.java.is.okay;
 import java.util.List;
 import java.util.Map;
 
-public class GetAndSet {
+public class JavaGetAndSet {
     private List<String> myList;
 
     private final Map<Integer, String> myMap;
 
-    public GetAndSet(List<String> myList, Map<Integer, String> myMap) {
+    public JavaGetAndSet(List<String> myList, Map<Integer, String> myMap) {
         this.myList = myList;
         this.myMap = myMap;
     }
