@@ -14,17 +14,12 @@ class SealedClassesTest: ShouldSpec() {
         }
     }
 
-    private fun createTwoStringValue(field1: String, field2: String): SealedClasses {
-        return TwoStringValue(field1, field2)
-    }
+    private fun createTwoStringValue(field1: String, field2: String): SealedClasses
+        = TwoStringValue(field1, field2)
 
-    private fun createOneStringValue(field: String): SealedClasses {
-        return OneStringValue(field)
-    }
+    private fun createOneStringValue(field: String): SealedClasses = OneStringValue(field)
 
-    private fun createLackOfValue(): SealedClasses {
-        return LackOfValue("We have no value")
-    }
+    private fun createLackOfValue(): SealedClasses = LackOfValue("We have no value")
 
     private fun returnValue(sealedClass: SealedClasses) = when(sealedClass) {
         is TwoStringValue -> sealedClass.combineFields()

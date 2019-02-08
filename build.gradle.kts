@@ -1,4 +1,3 @@
-import org.gradle.api.internal.tasks.testing.DecoratingTestDescriptor
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 /*
@@ -10,6 +9,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins{
     id("java")
     kotlin("jvm").version("1.3.21")
+    id("idea")
 }
 
 repositories {
@@ -20,6 +20,8 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.2.1")
+    // Just to remove the slf4j logging error when running tests
+    testImplementation("org.slf4j:slf4j-simple:1.7.25")
 }
 
 val test by tasks.getting(Test::class) {
