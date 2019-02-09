@@ -6,13 +6,13 @@ import io.kotlintest.specs.ShouldSpec
 
 class ParameterPassingTest: ShouldSpec() {
     init {
-        should("Use Java's parameter passing with builder") {
+        should("Use Java's parameter passing with builder pattern") {
             val javaParameters = JavaParameters()
-            javaParameters.firstSetting("First")
-            javaParameters.secondSetting("Second")
-            javaParameters.thirdSetting("Third")
+                .firstSetting("First")
+                .secondSetting("Second")
+                .thirdSetting("Third")
 
-            javaParameters.also {
+            javaParameters.let {
                 it.firstSetting shouldBe "First"
                 it.secondSetting shouldBe "Second"
                 it.thirdSetting shouldBe "Third"
