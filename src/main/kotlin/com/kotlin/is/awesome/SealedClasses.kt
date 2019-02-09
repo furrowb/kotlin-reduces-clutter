@@ -2,7 +2,9 @@ package com.kotlin.`is`.awesome
 
 // Sealed classes are like an extended Enum class.
 // Each subclass can have its own functions/values while still being part of the sealed class.
-sealed class SealedClasses(val requiredField: String)
+sealed class SealedClasses(private val requiredField: String) {
+    fun requiredFieldValue() = requiredField
+}
 
 // We'll use this to show a return type that is missing a value
 data class LackOfValue(val message: String): SealedClasses("LackOfValue Subclass")

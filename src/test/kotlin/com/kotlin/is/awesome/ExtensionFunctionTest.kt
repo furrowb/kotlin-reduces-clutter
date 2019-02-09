@@ -20,7 +20,7 @@ class ExtensionFunctionTest: ShouldSpec() {
     }
 }
 
-// Adding a new function that does not exist on the original Class
+// Adding a new function that does not exist on the original class
 fun JavaGetAndSet.myNewFunction() {
     this.myList.removeAt(0)
 }

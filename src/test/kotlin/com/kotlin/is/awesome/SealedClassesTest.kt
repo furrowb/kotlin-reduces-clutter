@@ -6,12 +6,14 @@ import io.kotlintest.specs.ShouldSpec
 class SealedClassesTest: ShouldSpec() {
     init {
         should("Showcase a case statement with sealed classes") {
-            val sealedClass = createLackOfValue()
+            val lackOfValue = createLackOfValue()
+            lackOfValue.requiredFieldValue()
 
-            val result = returnValue(sealedClass)
+            val result = returnValue(lackOfValue)
 
             result shouldBe "We have no value"
         }
+
     }
 
     private fun createTwoStringValue(field1: String, field2: String): SealedClasses
