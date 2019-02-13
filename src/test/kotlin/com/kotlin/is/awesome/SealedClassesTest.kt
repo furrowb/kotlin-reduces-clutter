@@ -13,7 +13,6 @@ class SealedClassesTest: ShouldSpec() {
 
             result shouldBe "We have no value"
         }
-
     }
 
     private fun createTwoStringValue(field1: String, field2: String): SealedClasses
@@ -23,9 +22,10 @@ class SealedClassesTest: ShouldSpec() {
 
     private fun createLackOfValue(): SealedClasses = LackOfValue("We have no value")
 
-    private fun returnValue(sealedClass: SealedClasses) = when(sealedClass) {
-        is TwoStringValue -> sealedClass.combineFields()
-        is OneStringValue -> sealedClass.field1
-        is LackOfValue -> sealedClass.message
-    }
+    private fun returnValue(sealedClass: SealedClasses) =
+        when(sealedClass) {
+            is TwoStringValue -> sealedClass.combineFields()
+            is OneStringValue -> sealedClass.field1
+            is LackOfValue -> sealedClass.message
+        }
 }
