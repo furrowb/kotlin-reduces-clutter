@@ -12,39 +12,39 @@ class ParameterPassingTest: ShouldSpec() {
                 .secondSetting("Second")
                 .thirdSetting("Third")
 
-            javaParameters.let {
-                it.firstSetting shouldBe "First"
-                it.secondSetting shouldBe "Second"
-                it.thirdSetting shouldBe "Third"
+            with(javaParameters) {
+                firstSetting shouldBe "First"
+                secondSetting shouldBe "Second"
+                thirdSetting shouldBe "Third"
             }
         }
 
         should("Use Java's parameter passing sluggishly but with Kotlin scope functions") {
             val javaParameters = JavaParameters().apply {
-                this.setParameters("First one!", "Second One!", "Still have to set the third one")
-                this.firstSetting("First")
-                this.secondSetting("Second")
-                this.thirdSetting("Third")
+                setParameters("First one!", "Second One!", "Still have to set the third one")
+                firstSetting("First")
+                secondSetting("Second")
+                thirdSetting("Third")
             }
 
-            javaParameters.let {
-                it.firstSetting shouldBe "First"
-                it.secondSetting shouldBe "Second"
-                it.thirdSetting shouldBe "Third"
+            with(javaParameters) {
+                firstSetting shouldBe "First"
+                secondSetting shouldBe "Second"
+                thirdSetting shouldBe "Third"
             }
         }
 
         should("Use Kotlin's scope functions") {
-            val kotlinParameters = KotlinParameters().also {
-                it.firstSetting = "First"
-                it.secondSetting = "Second"
-                it.thirdSetting = "Third"
+            val kotlinParameters = KotlinParameters().apply {
+                firstSetting = "First"
+                secondSetting = "Second"
+                thirdSetting = "Third"
             }
 
-            kotlinParameters.let {
-                it.firstSetting shouldBe "First"
-                it.secondSetting shouldBe "Second"
-                it.thirdSetting shouldBe "Third"
+            with(kotlinParameters) {
+                firstSetting shouldBe "First"
+                secondSetting shouldBe "Second"
+                thirdSetting shouldBe "Third"
             }
         }
 
@@ -52,10 +52,10 @@ class ParameterPassingTest: ShouldSpec() {
             val kotlinParameters = KotlinParameters()
             kotlinParameters.setParams(firstSetting = "First", secondSetting = "Second")
 
-            kotlinParameters.let {
-                it.firstSetting shouldBe "First"
-                it.secondSetting shouldBe "Second"
-                it.thirdSetting shouldBe "Default"
+            with(kotlinParameters) {
+                firstSetting shouldBe "First"
+                secondSetting shouldBe "Second"
+                thirdSetting shouldBe "Default"
             }
         }
     }

@@ -15,6 +15,18 @@ class NullSafetyTest: ShouldSpec() {
             lackOfNullSafety.maybeNull?.contains("Null")?.and(false)?.not() shouldBe null
         }
 
+        should("Slightly different way to check for null") {
+            val lackOfNullSafety = LackOfNullSafety(null)
+
+            lackOfNullSafety.maybeNull shouldBe null
+            val resultOfLet = lackOfNullSafety.maybeNull?.let {
+                it.capitalize()
+                it.drop(1)
+                it.toList()
+            }
+            resultOfLet shouldBe null
+        }
+
         should("Won't even compile with null") {
             //val cantBeNull = NullSafety(null, null)
             val nullSafety = NullSafety("Not null", null)
