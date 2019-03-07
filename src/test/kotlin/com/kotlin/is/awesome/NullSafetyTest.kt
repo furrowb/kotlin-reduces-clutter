@@ -12,7 +12,10 @@ class NullSafetyTest: ShouldSpec() {
             val lackOfNullSafety = LackOfNullSafety(null)
 
             lackOfNullSafety.maybeNull shouldBe null
-            lackOfNullSafety.maybeNull?.contains("Null")?.and(false)?.not() shouldBe null
+            lackOfNullSafety.maybeNull
+                ?.contains("Null")
+                ?.and(false)
+                ?.not() shouldBe null
         }
 
         should("Slightly different way to check for null") {

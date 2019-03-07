@@ -1,6 +1,6 @@
 package com.java.is.okay;
 
-import com.java.is.okay.functional.FilterLambda;
+import com.java.is.okay.lambda.FilterLambda;
 
 import java.util.List;
 
