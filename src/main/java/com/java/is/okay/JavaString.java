@@ -20,4 +20,12 @@ public class JavaString {
   public String getCombinedStringViaConcatenation() {
     return item1 + " " + item2;
   }
+
+  public String blockOfText() {
+      return "Lorem ipsum dolor sit amet, consetetur sadipscing elitr," +
+          "\n" +
+          "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna" +
+          "\n" +
+          "aliquyam erat, sed diam voluptua. At vero eos et accusam et justo";
+  }
 }
