@@ -9,6 +9,7 @@ class NullSafety(val cantBeNull: String, val mightBeNull: String?) {
 
     fun smartChecking(): String {
         // This is not Kotlin idiomatic code. Use an elvis operator instead
+        // return mightBeNull ?: "It was null"
         return if(mightBeNull != null) {
             mightBeNull
         } else {

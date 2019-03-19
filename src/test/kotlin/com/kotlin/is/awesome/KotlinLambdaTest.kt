@@ -10,7 +10,7 @@ class KotlinLambdaTest : ShouldSpec() {
         should("Use Java Lambda") {
             val javaLambda = JavaLambda<String>(listOf("One", "Two"))
 
-            javaLambda.filter { list -> list.take(1)} shouldBe listOf("One")
+            javaLambda.filter { list -> list.take(1) } shouldBe listOf("One")
         }
 
         should("Use Kotlin Lambda") {
