@@ -6,7 +6,7 @@ import io.kotlintest.specs.ShouldSpec
 
 class ParameterPassingTest: ShouldSpec() {
     init {
-        should("Use Java's parameter passing with builder pattern") {
+        should("Use Java's verbose parameter passing with builder pattern") {
             val javaParameters = JavaParameters()
                 .firstSetting("First")
                 .secondSetting("Second")
@@ -19,7 +19,7 @@ class ParameterPassingTest: ShouldSpec() {
             }
         }
 
-        should("Use Java's parameter passing sluggishly but with Kotlin scope functions") {
+        should("Use Java's verbose parameter passing but with Kotlin scope functions") {
             val javaParameters = JavaParameters().apply {
                 setParameters("First one!", "Second One!", "Still have to set the third one")
                 firstSetting("First")
