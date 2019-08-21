@@ -11,12 +11,12 @@ The only requirements to use this are Java's JDK 1.8 and internet access. Gradle
 From the command prompt/PowerShell
 
 ```powershell
-gradlew.bat clean build
+gradlew.bat build
 ```
 
 ### MacOS/Linux
 From the your shell of choice
 
 ```bash
-./gradlew clean build
+./gradlew build
 ```
