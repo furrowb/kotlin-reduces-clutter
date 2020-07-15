@@ -1,44 +1,44 @@
 package com.java.is.okay;
 
 public class JavaParameters {
-    private String firstSetting;
-    private String secondSetting;
-    private String thirdSetting = "Default"; // Set a default value but unwieldy to use
+    private String first;
+    private String second;
+    private String third = "Default"; // Set a default value but unwieldy to use
 
     // No way to have a default parameter unless we overload method
     public void setParameters(String firstSetting, String secondSetting, String thirdSetting) {
-        this.firstSetting = firstSetting;
-        this.secondSetting = secondSetting;
-        this.thirdSetting = thirdSetting;
+        this.first = firstSetting;
+        this.second = secondSetting;
+        this.third = thirdSetting;
     }
 
     // Builder function to ease burden of setting up class
     public JavaParameters firstSetting(String value) {
-        this.firstSetting = value;
+        this.first = value;
         return this;
     }
 
     // Builder function to ease burden of setting up class
     public JavaParameters secondSetting(String value) {
-        this.secondSetting = value;
+        this.second = value;
         return this;
     }
 
     // Builder function to ease burden of setting up class
     public JavaParameters thirdSetting(String value) {
-        this.thirdSetting = value;
+        this.third = value;
         return this;
     }
 
-    public String getFirstSetting() {
-        return firstSetting;
+    public String getFirst() {
+        return first;
     }
 
-    public String getSecondSetting() {
-        return secondSetting;
+    public String getSecond() {
+        return second;
     }
 
-    public String getThirdSetting() {
-        return thirdSetting;
+    public String getThird() {
+        return third;
     }
 }

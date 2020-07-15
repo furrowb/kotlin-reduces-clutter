@@ -13,9 +13,9 @@ class ParameterPassingTest: ShouldSpec() {
                 .thirdSetting("Third")
 
             with(javaParameters) {
-                firstSetting shouldBe "First"
-                secondSetting shouldBe "Second"
-                thirdSetting shouldBe "Third"
+                first shouldBe "First"
+                second shouldBe "Second"
+                third shouldBe "Third"
             }
         }
 
@@ -28,9 +28,9 @@ class ParameterPassingTest: ShouldSpec() {
             }
 
             with(javaParameters) {
-                firstSetting shouldBe "First"
-                secondSetting shouldBe "Second"
-                thirdSetting shouldBe "Third"
+                first shouldBe "First"
+                second shouldBe "Second"
+                third shouldBe "Third"
             }
         }
 

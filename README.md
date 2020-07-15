@@ -12,7 +12,7 @@ Detailed below is the different topics covered and where to find the examples in
 - Test: GetAndSetTest
 
 ### Lambda definitions
-- Java: JavaLambda
+- Java: JavaLambda, FilterLambda
 - Kotlin: KotlinLambda
 - Test: KotlinLambdaTest
 
