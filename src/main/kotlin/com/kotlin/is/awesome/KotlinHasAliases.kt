@@ -29,3 +29,8 @@ fun passTheMap(theMap: SuperSpecializedMap) {
     // do something here
     val key = theMap["key"]
 }
+
+fun explicitlyCreatedHashMap() {
+    val hashMap = HashMap<String, String>()
+    passTheMap(hashMap)
+}
