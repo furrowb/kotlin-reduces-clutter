@@ -27,4 +27,5 @@ fun addToMap(key: String, value: String) {
 
 fun passTheMap(theMap: SuperSpecializedMap) {
     // do something here
+    val key = theMap["key"]
 }
