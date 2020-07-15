@@ -25,9 +25,10 @@ fun addToMap(key: String, value: String) {
     ourMap[key] = value
 }
 
-fun passTheMap(theMap: SuperSpecializedMap) {
+fun passTheMap(theMap: SuperSpecializedMap): String {
     // do something here
     val key = theMap["key"]
+    return key ?: "Why don't you have my key?!"
 }
 
 fun explicitlyCreatedHashMap() {
