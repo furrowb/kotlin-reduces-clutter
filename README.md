@@ -1,6 +1,6 @@
 # Kotlin Reduces Clutter
 
-This repository highlights some of the differences between Java and Kotlin.  It helps demonstrates how Kotlin's syntax can be more concise yet quite readable relative to Java.
+This repository highlights some differences between Java and Kotlin.  It helps demonstrates how Kotlin's syntax can be more concise yet quite readable relative to Java.
 
 ## High Level Topics Touched
 
@@ -59,7 +59,7 @@ gradlew.bat build
 ```
 
 ### MacOS/Linux
-From the your shell of choice
+From your shell of choice
 
 ```bash
 ./gradlew build

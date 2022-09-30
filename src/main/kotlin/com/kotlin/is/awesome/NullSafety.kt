@@ -1,7 +1,7 @@
 package com.kotlin.`is`.awesome
 
 class NullSafety(val cantBeNull: String, val mightBeNull: String?) {
-    // Anything with 'Type?' implies that the value COULD be null and you will need to check it
+    // Anything with 'Type?' implies that the value COULD be null, and you will need to check it
     fun returnSubString(): String? = mightBeNull?.substring(0, 1)
 
     // Using the ?: here checks that if it's null, use the provided expression/value instead
@@ -13,7 +13,7 @@ class NullSafety(val cantBeNull: String, val mightBeNull: String?) {
     fun smartChecking(): String {
         // This is not idiomatic Kotlin code. Use an elvis operator instead:
         // return mightBeNull ?: "It was null"
-        return if(mightBeNull != null) {
+        return if (mightBeNull != null) {
             mightBeNull
         } else {
             "It was null"
